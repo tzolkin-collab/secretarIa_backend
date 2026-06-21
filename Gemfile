@@ -5,7 +5,7 @@ gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
 
 gem "bcrypt", "~> 3.1.7"
-gem "jwt", "~> 2.9"
+gem "jwt", "~> 3.2"
 gem "rack-cors"
 
 # fiddle não é mais stdlib no Ruby 4.0 (dependência indireta de kamal/net-ssh)
