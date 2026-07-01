@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+# Se for boot do Rails server, garante db:prepare + db:seed (idempotente)
+if [[ "$@" == *"rails"*"server"* ]] || [[ "$@" == *"puma"* ]]; then
+  ./bin/rails db:prepare
+  ./bin/rails db:seed || true
+fi
+
+exec "${@}"
